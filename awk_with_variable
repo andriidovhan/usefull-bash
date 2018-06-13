@@ -1,0 +1,5 @@
+How to pass varaiable into awk
+	AMOUNT=5
+	`awk '{ SUM += $10} END { print SUM/"'$AMOUNT'" }' $LOG_FILE_WITHOUT_WESTON`
+
+	`awk -v amount=$AMOUNT '{ SUM += $10} END { print SUM/amount }' $LOG_FILE_WITH_WESTON` 
